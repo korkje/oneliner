@@ -30,4 +30,3 @@ Make it executable
 - ruby
 - nc
 - nc2 (for nc versions without -e)
-- java

