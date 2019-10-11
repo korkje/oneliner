@@ -1,0 +1,40 @@
+1. First, get a dumb reverse shell running in a nc session.
+
+2. Upgrade to PTY with python
+
+Run this in the remote shell
+$ python -c 'import pty;pty.spawn("/bin/bash")'
+
+You now have a pseudotty running, which means you can use commands such as su and ssh.
+
+3. Upgrade to full TTY using wizardry
+
+Send the nc session to the background with ctrl+z
+
+$ echo $TERM
+Take note (note #1)
+
+$ stty -a
+Take note of rows (note #2) and columns (note #3)
+
+Now, disable echoing and enable raw in/out
+$ stty raw -echo
+
+Since echoing is now disabled, you will not see the next command
+
+Get back into the nc session
+$ fg 
+$ reset
+
+Set variables
+$ export SHELL=bash
+$ export TERM=(note #1)
+$ stty rows (note #2) columns (note #3)
+
+bash: to exit the reverse shell, exit all the way with ctrl+d, and then
+$ stty -raw echo
+
+sh: To exit the reverse shell, either kill the pane...
+ctrl+b x y
+...or respawn it
+ctrl+b :respawn-pane -k
