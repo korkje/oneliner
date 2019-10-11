@@ -1,24 +1,33 @@
-# One-Liner-Reverse-Shell-Generator-Script
-One Liner Reverse Shell Generator Script
+## Oneliner
 
-Generate One Liner Reverse Shell Commands 
+### Description
 
-1.bash      2. sh
-3.perl      4.py
-5.php       6.ruby
-7.nc        8.nct (Tradtional without -e)
-9.java
+A tiny tool that generates reverse shell commands
 
-Run the bash script. Usage and Shell Command Name will be displayed
 
-![2017-12-13 12_10_22-kali-linux-2017 2-vm-amd64-nessus-burppro - vmware workstation](https://user-images.githubusercontent.com/2913793/33930699-d2578b32-dffe-11e7-91a4-9e861783d22d.png)
+### Installation
 
-Usage: oneliner.sh bash 192.168.0.1 4444
+Move oneliner to a directory in your path  
+`mv oneliner /usr/local/bin/`
 
-To generate bash shell command with ip 192.168.0.1 and port 4444
+Make it executable  
+`chmod +x /usr/local/bin/oneliner`
 
-![2017-12-13 12_11_14-kali-linux-2017 2-vm-amd64-nessus-burppro - vmware workstation](https://user-images.githubusercontent.com/2913793/33930700-d2829110-dffe-11e7-9081-aeb668aa114c.png)
+### Usage
 
-Copy command and paste to get shell.
+`$ oneliner <kind> <ip> <port>`
 
-Credits : pentestmonkey.com
+##### Example
+
+`$ oneliner sh 192.168.0.1 9001`
+
+##### Kinds
+- sh
+- bash
+- perl
+- py
+- php
+- ruby
+- nc
+- nc2 (for nc versions without -e)
+- java
