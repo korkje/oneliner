@@ -39,9 +39,9 @@ case $1 in
     ;;
 
   *)
-    printf "\nReverse shell oneliners!\n"
-    printf "\nUsage\n$ oneliner <kind> <ip> <port>\n"
-    printf "\nExample\n$ oneliner sh 192.168.0.1 9001\n"
+    printf "\nReverse shell commands!\n"
+    printf "\nUsage\n$ resh <kind> <ip> <port>\n"
+    printf "\nExample\n$ resh sh 192.168.0.1 9001\n"
     printf "\nKinds\n- sh\n- bash\n- perl\n- py\n- php\n- ruby\n- nc\n- nc2 (for nc versions without -e)\n- java\n"
     ;;
 
