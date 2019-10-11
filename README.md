@@ -7,8 +7,8 @@ A tiny tool that generates reverse shell commands
 
 ### Installation
 
-Move `resh` to a directory in your path  
-`mv resh /usr/local/bin/`
+Copy `resh` to a directory in your path  
+`cp resh /usr/local/bin/`
 
 Make it executable  
 `chmod +x /usr/local/bin/resh`
