@@ -35,9 +35,22 @@ case $1 in
     ;;
 
   *)
-    printf "\nUsage\n$ resh <kind> <ip> <port>\n"
-    printf "\nExample\n$ resh sh 192.168.0.1 9001\n"
-    printf "\nKinds\n- sh\n- bash\n- perl\n- py\n- php\n- ruby\n- nc\n- nc2 (for nc versions without -e)\n"
+    echo ""
+    echo "Usage"
+    echo "$ resh <kind> <ip> <port>"
+    echo ""
+    echo "Example"
+    echo "$ resh sh 192.168.0.1 9001"
+    echo ""
+    echo "Kinds"
+    echo "- sh"
+    echo "- bash"
+    echo "- perl"
+    echo "- py"
+    echo "- php"
+    echo "- ruby"
+    echo "- nc"
+    echo "- nc2 (for nc versions without -e)"
     ;;
 
 esac
