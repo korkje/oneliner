@@ -36,21 +36,27 @@ case $1 in
 
   *)
     echo ""
-    echo "Usage"
-    echo "$ resh <kind> <ip> <port>"
+    tput bold
+    echo "  Usage"
+    tput sgr0
+    echo "  $ resh <kind> <ip> <port>"
     echo ""
-    echo "Example"
-    echo "$ resh sh 192.168.0.1 9001"
+    tput bold
+    echo "  Example"
+    tput sgr0
+    echo "  $ resh sh 192.168.0.1 9001"
     echo ""
-    echo "Kinds"
-    echo "- sh"
-    echo "- bash"
-    echo "- perl"
-    echo "- py"
-    echo "- php"
-    echo "- ruby"
-    echo "- nc"
-    echo "- nc2 (for nc versions without -e)"
+    tput bold
+    echo "  Kinds"
+    tput sgr0
+    echo "  - sh"
+    echo "  - bash"
+    echo "  - perl"
+    echo "  - py"
+    echo "  - php"
+    echo "  - ruby"
+    echo "  - nc"
+    echo "  - nc2 (for nc versions without -e)"
     ;;
 
 esac
